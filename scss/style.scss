@@ -1,0 +1,35 @@
+@use "sass:math";
+$element_size: 300;
+$divider: 2;
+$difference: 50;
+
+@function calculate($num1, $num2, $num3) {
+  @if $num3 == "m" {
+    @return $num1 * $num2 + px;
+  } @else if $num3 == "dz" {
+    @return math.div($num1, $num2) + px; 
+  } @else if $num3 == "o" {
+    @return $num1 - $num2 + px;
+  } @else if $num3 == "d" {
+    @return $num1 + $num2 + px;
+  }@else{
+    @return $element_size + px;
+  }
+}
+.styl { 
+  margin: 20px;
+  height: 100px;
+  background-color: blue;
+}
+.mnożenie {
+  width: calculate($element_size, $divider, "m");
+}
+.dzielenie {
+  width: calculate($element_size, $divider, "dz");
+}
+.odejmowanie {
+  width: calculate($element_size, $difference, "o");
+}
+.dodawanie {
+  width: calculate($element_size, $difference, "d");
+}

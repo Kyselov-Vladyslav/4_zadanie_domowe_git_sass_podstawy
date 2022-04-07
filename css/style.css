@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.styl {
+  margin: 20px;
+  height: 100px;
+  background-color: blue;
+}
+
+.mnożenie {
+  width: 600px;
+}
+
+.dzielenie {
+  width: 150px;
+}
+
+.odejmowanie {
+  width: 250px;
+}
+
+.dodawanie {
+  width: 350px;
+}
+
+/*# sourceMappingURL=style.css.map */
